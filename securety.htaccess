@@ -1,0 +1,13 @@
+<IfModule mod_headers.c>
+    # Content Security Policy (CSP)
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' https://example.com; style-src 'self' https://example.com;"
+    
+    # X-Content-Type-Options
+    Header always set X-Content-Type-Options "nosniff"
+
+    # X-Frame-Options
+    Header always set X-Frame-Options "DENY"
+
+    # X-XSS-Protection
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>
